@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,14 +10,20 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class App {
- title: string = "Access to install educational software on the computer";
- id:number|null = null;
+  private readonly router = inject(Router);
 
-question = signal(false);
+  title = 'גישה להתקנת תוכנות לימודיות על המחשב';
+  id: number | null = null;
 
-  /** נקרא בכל שינוי של התיבה ומעדכן את הסיגנל לערך המדויק שלה */
+  question = signal(false);
+
   onQuestionChange(event: Event): void {
     this.question.set((event.target as HTMLInputElement).checked);
   }
-}
 
+  enterMarks(): void {
+    if (this.question()) {
+      void this.router.navigate(['/marks']);
+    }
+  }
+}

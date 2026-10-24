@@ -10,4 +10,7 @@
 <!-- מציג את הערך של השאלה עכשיו -->
 <!-- <p>question is: {{ question() }}</p> -->
 
-<button (click)="CheckTheCheckbox()" [disabled]="!question()">היכנס</button>
+<button (click)="enterMarks()" [disabled]="!question()">היכנס</button>
+
+<a routerLink="/marks"></a>
+<router-outlet></router-outlet>
