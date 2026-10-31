@@ -2,13 +2,15 @@
 
 <ul>
   @for (m of marks; track $index) {
-    <li>
-      @if (m.mark >= passMark) {
-        {{ m.subject }} : {{ m.mark }} עבר
-      } @else {
-        {{ m.subject }} : {{ m.mark }} <span class="failed">לא עבר</span>
-      }
-    </li>
+  <li>
+    @if (m.mark >= passMark) {
+    {{ m.subject }} : {{ m.mark }} עבר
+    } @else {
+    {{ m.subject }} : {{ m.mark }} <span [ngStyle]="{ color: 'red', 'font-weight': 'bold' }">
+      לא עבר
+    </span>
+    }
+  </li>
   } <br>
-    <strong>The avg is: {{avg}}</strong> 
+  <strong>The avg is: {{avg}}</strong>
 </ul>

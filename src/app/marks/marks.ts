@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgStyle } from '@angular/common';
 
 interface Mark {
   subject: string;
@@ -7,9 +8,11 @@ interface Mark {
 
 @Component({
   selector: 'app-marks',
+  imports: [NgStyle],
   templateUrl: './marks.html',
   styleUrl: './marks.css',
 })
+
 export class Marks {
   readonly passMark = 60;
 
