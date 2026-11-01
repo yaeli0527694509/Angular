@@ -1,0 +1,9 @@
+#discount-message {
+    color: red;
+    font-weight: bold;
+}
+
+#description {
+    font-family: 'Arial', sans-serif;
+    color: rgb(74, 74, 74);
+}

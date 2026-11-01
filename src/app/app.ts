@@ -21,9 +21,14 @@ export class App {
     this.question.set((event.target as HTMLInputElement).checked);
   }
 
-  enterMarks(): void {
+
+  // enterMarks(): void {  שיעור 2 
+  enterParentLesson4(): void {   // parent-lesson4 פונקציה שמנווטת את התצוגה לדף
     if (this.question()) {
-      void this.router.navigate(['/marks']);
+      // void this.router.navigate(['/marks']);   שיעור 2
+      void this.router.navigate(['/parent-lesson4']);
     }
   }
 }
+
+

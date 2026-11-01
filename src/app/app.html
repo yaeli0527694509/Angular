@@ -1,16 +1,22 @@
-<h2>my title is:<br>{{ title }}</h2><br>
+<!-- שיעור 1
+ <h2>my title is:<br>{{ title }}</h2><br>
 <input type="number" [(ngModel)]="id" placeholder="Enter your id"><br>
 <h3>my id = {{ id }}</h3>
+-->
 
 <label>
   <input type="checkbox" [checked]="question()" (change)="onQuestionChange($event)">
   ?האם קראת ואישרת את התקנון <br><br>
 </label>
 
-<!-- מציג את הערך של השאלה עכשיו -->
+<!-- true / false  - מציג את הערך של השאלה עכשיו -->
 <!-- <p>question is: {{ question() }}</p> -->
 
-<button (click)="enterMarks()" [disabled]="!question()">היכנס</button>
+<!-- <button (click)="enterMarks()" [disabled]="!question()">היכנס</button>  שיעור 2-->
+<button (click)="enterParentLesson4()" [disabled]="!question()">היכנס</button>
 
-<a routerLink="/marks"></a>
+<!-- <a routerLink="/marks"></a>  שיעור 2-->
 <router-outlet></router-outlet>
+
+
+

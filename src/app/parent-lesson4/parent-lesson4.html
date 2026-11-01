@@ -1,0 +1,10 @@
+<app-child-lesson4 [Electrical_items]="Electrical_items" [selectedItem]="selectedItem"></app-child-lesson4>
+@for (item of Electrical_items; track item.name) {
+  <h3>{{item.name}}</h3>
+  <p id="description">{{item.description}}</p>
+  <p>price: ₪{{item.price*(1-item.discountPercentage/100)}}
+    @if ((item.price*(1-item.discountPercentage/100)) > 300)
+        { <b id="discount-message">!הנחה משתלמת</b> }
+  </p> 
+  <br><br>
+}
