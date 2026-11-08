@@ -4,19 +4,22 @@
 <h3>my id = {{ id }}</h3>
 -->
 
-<label>
+<!-- <label>
   <input type="checkbox" [checked]="question()" (change)="onQuestionChange($event)">
   ?האם קראת ואישרת את התקנון <br><br>
-</label>
+</label> -->
 
 <!-- true / false  - מציג את הערך של השאלה עכשיו -->
 <!-- <p>question is: {{ question() }}</p> -->
 
 <!-- <button (click)="enterMarks()" [disabled]="!question()">היכנס</button>  שיעור 2-->
-<button (click)="enterParentLesson4()" [disabled]="!question()">היכנס</button>
+<!-- <button (click)="enterParentLesson4()" [disabled]="!question()">היכנס</button> -->
+<!-- <app-parent-lesson5 *ngIf="question()"></app-parent-lesson5> -->
+<app-parent-lesson5></app-parent-lesson5>
+
 
 <!-- <a routerLink="/marks"></a>  שיעור 2-->
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet>   שיעור 4-->
 
 
 
