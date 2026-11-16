@@ -1,11 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ChildLesson5 } from './child-lesson5/child-lesson5';
-import { ParentLesson5 } from './parent-lesson5/parent-lesson5';
+import { Lesson6 } from './lesson6/lesson6';
 
 @Component({
-  imports: [RouterOutlet, FormsModule, ChildLesson5, ParentLesson5],
+  imports: [RouterOutlet, FormsModule, Lesson6],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -25,12 +24,13 @@ export class App {
 
 
   // enterMarks(): void {  שיעור 2 
-  enterParentLesson4(): void {   // parent-lesson4 פונקציה שמנווטת את התצוגה לדף
-    if (this.question()) {
-      // void this.router.navigate(['/marks']);   שיעור 2
-      void this.router.navigate(['/parent-lesson4']);
-    }
-  }
+  // enterParentLesson4(): void {   // parent-lesson4 פונקציה שמנווטת את התצוגה לדף
+  //   if (this.question()) {
+  //     // void this.router.navigate(['/marks']);   שיעור 2
+  //     void this.router.navigate(['/parent-lesson4']);
+  //   }
+  // }
+  
 }
 
 

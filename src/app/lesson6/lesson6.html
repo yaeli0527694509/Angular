@@ -1,0 +1,31 @@
+<h2>טופס הזמנת ביקור טכנאי</h2>
+<form [formGroup]="TechnicianVisit">
+  <label for="date">תאריך: </label>
+  <input type="date" id="date" formControlName="date"><br><br>
+
+  <label for="requesterName">שם המזמין: </label>
+  <input type="text" id="requesterName" formControlName="requesterName"><br><br>
+
+  <label for="address">כתובת: </label>
+  <input type="text" id="address" formControlName="address"><br><br>
+
+  <label for="city">עיר: </label>
+  <input type="text" id="city" formControlName="city"><br><br>
+
+  <label for="phone">טלפון: </label>
+  <input type="tel" id="phone" formControlName="phone"><br><br>
+
+  <label for="reason">סיבת הזימון: </label>
+  <select id="reason" formControlName="reason">
+    <option value="">בחר סיבה</option> // מה option עושה?
+    <option *ngFor="let reason of reasons" [value]="reason">{{ reason }}</option>  
+  </select><br><br>
+    
+  <label for="invoiceNumber">מספר חשבונית: </label>
+  <input type="text" id="invoiceNumber" formControlName="invoiceNumber"><br><br>
+    
+  <label for="description">תאור התקלה: </label>
+  <textarea id="description" formControlName="description"></textarea><br><br>
+  
+  <button type="submit" [disabled]="!TechnicianVisit.valid">שלח</button>
+</form>

@@ -1,0 +1,17 @@
+input.ng-invalid,
+select.ng-invalid,
+textarea.ng-invalid {
+  border-style: double;
+}
+
+h2 {
+    direction: rtl;
+    margin-right: 5%;
+}
+
+form {
+    direction: rtl;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5%;
+}
